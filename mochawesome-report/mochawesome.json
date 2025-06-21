@@ -1,14 +1,14 @@
 {
   "stats": {
-    "suites": 4,
-    "tests": 7,
-    "passes": 7,
+    "suites": 5,
+    "tests": 8,
+    "passes": 8,
     "pending": 0,
     "failures": 0,
-    "start": "2025-06-21T03:51:10.466Z",
-    "end": "2025-06-21T03:51:12.291Z",
-    "duration": 1825,
-    "testsRegistered": 7,
+    "start": "2025-06-21T03:57:47.009Z",
+    "end": "2025-06-21T03:57:48.888Z",
+    "duration": 1879,
+    "testsRegistered": 8,
     "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "ef63654a-290c-4b51-9bf9-a07106684cae",
+      "uuid": "fa684c32-18d3-4806-80a9-d58551bb912f",
       "title": "",
       "fullFile": "",
       "file": "",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "e3b59017-52ac-4ea6-abf4-2068daa4b0ae",
+          "uuid": "ebb36c4a-5948-41de-a745-cf4a5efb8b2e",
           "title": "Feature Reqres Create User",
           "fullFile": "C:\\Users\\izzar\\Videos\\sesi 7\\sesi7_ummu\\tests\\createUser.js",
           "file": "\\tests\\createUser.js",
@@ -38,7 +38,7 @@
               "title": "POST - should return status 201",
               "fullTitle": "Feature Reqres Create User POST - should return status 201",
               "timedOut": false,
-              "duration": 541,
+              "duration": 519,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "const response = await fetch(\"https://reqres.in/api/users\",{\n        method: \"POST\",\n        headers: {\n            \"x-api-key\": \"reqres-free-v1\",\n            \"Content-Type\": \"application/json\"\n        },\n        body: JSON.stringify({\n            name: \"Izza\",\n            job: \"leader\"\n        })\n    });\n    const data = await response.json();\n    // Cek status code\n    // console.log(data)\n    assert.strictEqual(response.status, 201, \"Status code should be 201\");",
               "err": {},
-              "uuid": "3092d521-92b1-4b9a-8424-1c5ec9cb1cca",
-              "parentUUID": "e3b59017-52ac-4ea6-abf4-2068daa4b0ae",
+              "uuid": "bc8a1fc7-a462-4239-9561-f6e75f0c7637",
+              "parentUUID": "ebb36c4a-5948-41de-a745-cf4a5efb8b2e",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "POST - response should contain an id ",
               "fullTitle": "Feature Reqres Create User POST - response should contain an id ",
               "timedOut": false,
-              "duration": 395,
+              "duration": 402,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -65,27 +65,27 @@
               "context": null,
               "code": "const response = await fetch(\"https://reqres.in/api/users\",{\n        method: \"POST\",\n        headers: {\n            \"x-api-key\": \"reqres-free-v1\",\n            \"Content-Type\": \"application/json\"\n        },\n        body: JSON.stringify({\n            name: \"Izza\",\n            job: \"leader\"\n        })\n    });\n    const data = await response.json();\n    // console.log(data)\n    // Cek apakah properti `id` ada\n    assert.ok(data.id, \"Response should contain an 'id'\");",
               "err": {},
-              "uuid": "b9ef3eb0-5e2e-4ba5-9e8a-c4f106197c56",
-              "parentUUID": "e3b59017-52ac-4ea6-abf4-2068daa4b0ae",
+              "uuid": "26c67f08-3c27-4706-b095-5e972454e4ad",
+              "parentUUID": "ebb36c4a-5948-41de-a745-cf4a5efb8b2e",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "3092d521-92b1-4b9a-8424-1c5ec9cb1cca",
-            "b9ef3eb0-5e2e-4ba5-9e8a-c4f106197c56"
+            "bc8a1fc7-a462-4239-9561-f6e75f0c7637",
+            "26c67f08-3c27-4706-b095-5e972454e4ad"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 936,
+          "duration": 921,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "c9a0b6d1-4e5c-4958-a123-b0d17f8995a2",
+          "uuid": "b45e659d-4f9c-46a0-bd92-db25a05486ef",
           "title": "Feature Reqres Delete User",
           "fullFile": "C:\\Users\\izzar\\Videos\\sesi 7\\sesi7_ummu\\tests\\deleteUser.js",
           "file": "\\tests\\deleteUser.js",
@@ -96,7 +96,7 @@
               "title": "Delete - should return status 204",
               "fullTitle": "Feature Reqres Delete User Delete - should return status 204",
               "timedOut": false,
-              "duration": 380,
+              "duration": 399,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -105,26 +105,26 @@
               "context": null,
               "code": "const response = await fetch(\"https://reqres.in/api/users/714\",{\n        method: \"DELETE\",\n        headers: {\n            \"x-api-key\": \"reqres-free-v1\",\n            \"Content-Type\": \"application/json\"\n        }\n    });\n    \n    // Cek status code\n    assert.strictEqual(response.status, 204, \"Status code should be 204\");",
               "err": {},
-              "uuid": "2e05f10c-8aba-43e3-8220-3bf6ab948c97",
-              "parentUUID": "c9a0b6d1-4e5c-4958-a123-b0d17f8995a2",
+              "uuid": "bbacd328-74ef-499c-b136-f1d93f2cd21a",
+              "parentUUID": "b45e659d-4f9c-46a0-bd92-db25a05486ef",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "2e05f10c-8aba-43e3-8220-3bf6ab948c97"
+            "bbacd328-74ef-499c-b136-f1d93f2cd21a"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 380,
+          "duration": 399,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "1bd2dcef-2cc1-468c-8d7f-78f09ba90b83",
+          "uuid": "7dc2e386-058a-4168-8ffd-06f7eceae819",
           "title": "Feature Reqres Get Users",
           "fullFile": "C:\\Users\\izzar\\Videos\\sesi 7\\sesi7_ummu\\tests\\getUsers.js",
           "file": "\\tests\\getUsers.js",
@@ -135,7 +135,7 @@
               "title": "GET List - should return status 200",
               "fullTitle": "Feature Reqres Get Users GET List - should return status 200",
               "timedOut": false,
-              "duration": 40,
+              "duration": 41,
               "state": "passed",
               "speed": "medium",
               "pass": true,
@@ -144,8 +144,8 @@
               "context": null,
               "code": "const response = await fetch(\"https://reqres.in/api/users\",{\n        headers: {\n            \"x-api-key\": \"reqres-free-v1\",\n            \"Content-Type\": \"application/json\"\n        }\n    });\n    const data = await response.json();\n    // Cek status code\n    // console.log(data)\n    assert.strictEqual(response.status, 200, \"Status code should be 200\");",
               "err": {},
-              "uuid": "a8ec5829-e3e6-4125-84e1-5e9b5d91e069",
-              "parentUUID": "1bd2dcef-2cc1-468c-8d7f-78f09ba90b83",
+              "uuid": "6a198c7f-f94b-4370-a805-be6691aa17e8",
+              "parentUUID": "7dc2e386-058a-4168-8ffd-06f7eceae819",
               "isHook": false,
               "skipped": false
             },
@@ -153,17 +153,17 @@
               "title": "GET List - should return json",
               "fullTitle": "Feature Reqres Get Users GET List - should return json",
               "timedOut": false,
-              "duration": 35,
+              "duration": 38,
               "state": "passed",
-              "speed": "fast",
+              "speed": "medium",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
               "code": "const response = await fetch(\"https://reqres.in/api/users\",{\n        headers: {\n            \"x-api-key\": \"reqres-free-v1\",\n            \"Content-Type\": \"application/json\"\n        }\n    });\n    const data = await response.json();\n    \n    // Cek content-type JSON\n    const contentType = response.headers.get(\"content-type\");\n    assert.ok(contentType.includes(\"application/json\"), \"Response should be JSON\");",
               "err": {},
-              "uuid": "4d966431-eca5-4922-bf07-a262ad15f887",
-              "parentUUID": "1bd2dcef-2cc1-468c-8d7f-78f09ba90b83",
+              "uuid": "07e83ae4-0238-4867-b3bc-9f57ccc3584e",
+              "parentUUID": "7dc2e386-058a-4168-8ffd-06f7eceae819",
               "isHook": false,
               "skipped": false
             },
@@ -171,7 +171,7 @@
               "title": "GET List - should return <500ms",
               "fullTitle": "Feature Reqres Get Users GET List - should return <500ms",
               "timedOut": false,
-              "duration": 35,
+              "duration": 37,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -180,28 +180,28 @@
               "context": null,
               "code": "const start = Date.now();\nconst response = await fetch(\"https://reqres.in/api/users\",{\n    headers: {\n        \"x-api-key\": \"reqres-free-v1\",\n        \"Content-Type\": \"application/json\"\n    }\n});\nconst duration = Date.now() - start;\nconst data = await response.json();\n// Cek response time\nassert.ok(duration < 500, `Response time ${duration}ms exceeded 500ms`);",
               "err": {},
-              "uuid": "e0a9a38f-c956-4761-b487-f1e822b0d82c",
-              "parentUUID": "1bd2dcef-2cc1-468c-8d7f-78f09ba90b83",
+              "uuid": "efbcf4b0-c133-4cf0-a5b5-797f1a54a11c",
+              "parentUUID": "7dc2e386-058a-4168-8ffd-06f7eceae819",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "a8ec5829-e3e6-4125-84e1-5e9b5d91e069",
-            "4d966431-eca5-4922-bf07-a262ad15f887",
-            "e0a9a38f-c956-4761-b487-f1e822b0d82c"
+            "6a198c7f-f94b-4370-a805-be6691aa17e8",
+            "07e83ae4-0238-4867-b3bc-9f57ccc3584e",
+            "efbcf4b0-c133-4cf0-a5b5-797f1a54a11c"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 110,
+          "duration": 116,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "f3fe8492-be77-4382-97b4-15dfcdcdbed8",
+          "uuid": "c7eae251-13a2-432d-8fbb-f9ed52cfdbfa",
           "title": "Feature Reqres Update User",
           "fullFile": "C:\\Users\\izzar\\Videos\\sesi 7\\sesi7_ummu\\tests\\updateUser.js",
           "file": "\\tests\\updateUser.js",
@@ -212,7 +212,7 @@
               "title": "PATCH - should return status 200",
               "fullTitle": "Feature Reqres Update User PATCH - should return status 200",
               "timedOut": false,
-              "duration": 388,
+              "duration": 410,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -221,20 +221,59 @@
               "context": null,
               "code": "const response = await fetch(\"https://reqres.in/api/users/714\",{\n        method: \"PATCH\",\n        headers: {\n            \"x-api-key\": \"reqres-free-v1\",\n            \"Content-Type\": \"application/json\"\n        },\n        body: JSON.stringify({\n            name: \"Izza edited\"\n        })\n    });\n    const data = await response.json();\n    // Cek status code\n    // console.log(data)\n    assert.strictEqual(response.status, 200, \"Status code should be 200\");",
               "err": {},
-              "uuid": "7f76188a-c562-47f7-9f78-cbbd41ab1927",
-              "parentUUID": "f3fe8492-be77-4382-97b4-15dfcdcdbed8",
+              "uuid": "218d5ec5-5760-4926-9e6e-0451af94e6f1",
+              "parentUUID": "c7eae251-13a2-432d-8fbb-f9ed52cfdbfa",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "7f76188a-c562-47f7-9f78-cbbd41ab1927"
+            "218d5ec5-5760-4926-9e6e-0451af94e6f1"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 388,
+          "duration": 410,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "b0a60ca5-bd37-4227-bad8-f71715af764c",
+          "title": "Validasi JSON Schema",
+          "fullFile": "C:\\Users\\izzar\\Videos\\sesi 7\\sesi7_ummu\\tests\\validate.js",
+          "file": "\\tests\\validate.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should validate response against schema",
+              "fullTitle": "Validasi JSON Schema should validate response against schema",
+              "timedOut": false,
+              "duration": 25,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Data respons yang akan divalidasi\nconst responseData = {\n  name: \"Izza\",\n  job: \"Leader\",\n};\n// Definisi skema JSON\nconst schema = {\n  type: \"object\",\n  properties: {\n    name: { type: \"string\" },\n    job: { type: \"string\" }\n  },\n  required: [\"name\", \"job\"],\n};\n// Kompilasi dan validasi skema\nconst validate = ajv.compile(schema);\nconst isValid = validate(responseData);\n// Cetak error jika tidak valid\nif (!isValid) {\n  console.error(\"Schema validation errors:\", validate.errors);\n}\n// Assertion\nexpect(isValid, JSON.stringify(validate.errors, null, 2)).to.be.true;",
+              "err": {},
+              "uuid": "563d3515-1e93-4aae-a2d0-2ba6fedf64e5",
+              "parentUUID": "b0a60ca5-bd37-4227-bad8-f71715af764c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "563d3515-1e93-4aae-a2d0-2ba6fedf64e5"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 25,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
