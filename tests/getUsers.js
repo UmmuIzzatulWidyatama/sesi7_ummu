@@ -1,6 +1,6 @@
 const assert = require("assert");
 
-describe("Feature Reqres", function () {
+describe("Feature Reqres Get Users", function () {
   it("GET List - should return status 200", async function () {
 
     const response = await fetch("https://reqres.in/api/users",{
